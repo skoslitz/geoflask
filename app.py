@@ -10,7 +10,8 @@ app.config.update(
 )
 app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
 
-
+from flaskext.coffee import coffee
+coffee(app) 
 
 @app.route('/')
 def index():
