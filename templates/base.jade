@@ -1,0 +1,20 @@
+doctype 
+html
+head 
+	title actageo-blog
+	meta(name="viewport", content="width=device-width, initial-scale=1.0")
+	meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+	meta(name="author", content="Sebastian Koslitz")
+	meta(name="geo.region", content="DE-SN")
+	meta(name="geo.placename", content="Leipzig")
+	meta(name="geo.position", content="51.3062;12.3739")
+	meta(name="ICBM", content="51.3062, 12.3739")			
+	link(rel='stylesheet', type="text/css", href=url_for('static', filename="css/bootstrap.min.css"))
+	//- link(rel="shortcut icon", href="img/favicon.ico", type="image/x-icon")	
+	//- Jquery
+	//- script(src=url_for('static', filename="js/vendor/jquery-1.9.1.min.js"))
+body.container
+	a(href=url_for('index'))
+		img(style="margin-top: 20px;", src=url_for('static', filename='img/logo.png')) logo
+	hr
+	block content
