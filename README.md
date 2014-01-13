@@ -1,5 +1,10 @@
-# Jeder mag Demos!
-[**Eine Demo, gemacht mit der folgenden Anleitung findest du hier.**](http://jonasgroeger.de/projekte/flask-uberspace-quickstart/)
+# flask app gerüst
+dependencies:
+- pyjade
+- flask-coffee
+- flask
+
+---
 
 # flask-uberspace-quickstart
 Um auf [uberspace](https://uberspace.de) schnell eine [Flask](http://flask.pocoo.org/) Applikation mit schönen URLs zum laufen zu bringen, existiert dieses Projekt.
