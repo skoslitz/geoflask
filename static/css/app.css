@@ -9,5 +9,7 @@ a {
 }
 .tealeaf {
  	fill: #66bb50;
-
 }
+.tealeaf:hover {
+	fill: #333;
+};
