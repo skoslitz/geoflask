@@ -1,0 +1,79 @@
+body {
+  background-color: whitesmoke;
+}
+.waterways {
+  fill: none;
+  stroke: steelblue;
+  
+}
+.stream {
+  stroke: darkblue;
+}
+.ditch {
+  opacity: 0.6;
+}
+.drain {
+  opacity: 0.3;
+}
+.roads  {
+  opacity: 0.1;
+  stroke: darkred;
+  fill: none;
+}
+.cycleway {
+  fill: none;
+  stroke: darkgreen;
+  opacity: 1;
+}
+.residential {
+  fill: none;
+  stroke: crimson;
+  opacity: 1;
+}
+.places {
+  fill: chocolate;
+  opacity: 0.8;
+}
+.Neu-Hirschburg {
+  fill: crimson;
+  opacity: 1;
+}
+
+#mecklenburgPlaces {
+  margin-top: 20;
+}
+.graticule {
+  fill: none;
+  stroke: #333;
+  opacity: 0.4;
+}
+.india  {
+  fill: darkgrey;
+  opacity: 0.6;
+  stroke: darkred;
+}
+.india-places  {
+  fill: none;
+  stroke: blue;
+}
+#indiaState,
+#taiwanState,
+#indiaCity {
+  color: crimson;
+}
+.taiwan {
+  fill: darkgrey;
+  opacity: 0.6;
+  stroke: darkred;
+}
+.rivers {
+  fill: none;
+  stroke: steelblue;
+  
+}
+.arc path {
+  stroke: #fff;
+}
+.hidden {
+display: none;
+}
