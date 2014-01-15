@@ -1,7 +1,7 @@
 #!/usr/bin/env python2.7
 # -*- coding: utf8 -*-
 
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
 app.config.update(
