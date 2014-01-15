@@ -12,4 +12,7 @@ a {
 }
 .tealeaf:hover {
 	fill: #333;
-};
+}
+h1.logo {
+	margin-top: 60px;
+}
