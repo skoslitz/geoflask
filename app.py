@@ -21,5 +21,9 @@ def index():
 def teeatlas():
 	return render_template('teeatlas.jade')
 
+@app.route('/teeatlas/taiwan')
+def taiwan():
+	pass
+
 if __name__ == '__main__':
     app.run()
