@@ -23,7 +23,7 @@ def teeatlas():
 
 @app.route('/teeatlas/taiwan')
 def taiwan():
-	pass
+	return render_template('taiwan.jade')
 
 if __name__ == '__main__':
     app.run()
