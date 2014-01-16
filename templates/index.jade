@@ -1,13 +1,20 @@
 extends base
 block append content 
-	.col-md-4
-		h1 Ein Atlas für den Tee
-		p D3.js basierte Kartographie der Tee Anbaugebiete.  
-		a(href=url_for('teeatlas')) \\Link
-	.col-md-4
-		h1 Linksammlung Teeatlas
-		p Liste mit urls zu Themen des Tees
-		a(href=url_for('teeatlas')) \\Link
-	.col-md-4
-		h1 Mapping stuff
-		p d3.js prototypes
+	.row
+		.col-md-4
+			h1 Ein Atlas für den Tee
+			p D3.js basierte Kartographie der Tee Anbaugebiete
+			p Liste mit urls zu Themen des Tees
+			a(href=url_for('teeatlas')) \\Link
+		.col-md-4
+			h1 Mapping stuff
+			p d3.js prototypes
+		.col-md-4
+			h1 Charting stuff
+			p d3.js prototypes
+			a(href=url_for('charts')) \\Link
+	.row
+		.col-md-4
+			h1 d3.js Spielwiese
+			p diverse mockups	
+			a(href=url_for('d3mockup')) \\Link

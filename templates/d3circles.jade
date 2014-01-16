@@ -1,0 +1,34 @@
+extends base
+block append head
+	script(src=url_for('static', filename="js/d3/d3.js"))
+
+block append content
+	.text-center
+		.points
+
+	
+	script
+		var h = 50;
+		var w = 300;
+
+		var dataset = [2, 5, 4, 3, 5, 1];
+
+		// create svg
+		var svg = d3.select(".points").append("svg");
+
+		svg.attr("width", w)
+			.attr("height", h);
+
+		svg.selectAll("circle")
+			.data(dataset)
+			.enter()
+			.append("circle")
+			.attr("cx", function(d, i) {
+					return (i * 50) + 25;
+			})
+			.attr("cy", h/2)
+			.attr("r", function(d) {
+					return d * 2;
+			})
+			.append("title")
+			.text(function(d) {return d;});

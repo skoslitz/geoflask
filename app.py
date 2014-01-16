@@ -17,6 +17,14 @@ coffee(app)
 def index():
     return render_template('index.jade')
 
+@app.route('/charts')
+def charts():
+	return render_template('charts.jade')
+
+@app.route('/charts/HIS-HF')
+def hisHf():
+	return render_template('hisHf.jade')
+
 @app.route('/teeatlas')
 def teeatlas():
 	return render_template('teeatlas.jade')
@@ -24,6 +32,14 @@ def teeatlas():
 @app.route('/teeatlas/taiwan')
 def taiwan():
 	return render_template('taiwan.jade')
+
+@app.route('/d3mockup')
+def d3mockup():
+	return render_template('d3mockup.jade')
+
+@app.route('/d3mockup/circles')
+def d3circles():
+	return render_template('d3circles.jade')
 
 if __name__ == '__main__':
     app.run()
