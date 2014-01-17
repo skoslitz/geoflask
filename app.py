@@ -33,6 +33,10 @@ def teeatlas():
 def taiwan():
 	return render_template('teeatlas/taiwan.jade')
 
+@app.route('/teeatlas/indien')
+def indien():
+	return render_template('teeatlas/indien.jade')
+
 @app.route('/d3mockup')
 def d3mockup():
 	return render_template('d3mockup/d3mockup.jade')
