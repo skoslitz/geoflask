@@ -19,27 +19,27 @@ def index():
 
 @app.route('/charts')
 def charts():
-	return render_template('charts.jade')
+	return render_template('charts/charts.jade')
 
 @app.route('/charts/HIS-HF')
 def hisHf():
-	return render_template('hisHf.jade')
+	return render_template('charts/hisHf.jade')
 
 @app.route('/teeatlas')
 def teeatlas():
-	return render_template('teeatlas.jade')
+	return render_template('teeatlas/teeatlas.jade')
 
 @app.route('/teeatlas/taiwan')
 def taiwan():
-	return render_template('taiwan.jade')
+	return render_template('teeatlas/taiwan.jade')
 
 @app.route('/d3mockup')
 def d3mockup():
-	return render_template('d3mockup.jade')
+	return render_template('d3mockup/d3mockup.jade')
 
 @app.route('/d3mockup/circles')
 def d3circles():
-	return render_template('d3circles.jade')
+	return render_template('d3mockup/d3circles.jade')
 
 if __name__ == '__main__':
     app.run()
