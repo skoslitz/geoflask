@@ -45,5 +45,9 @@ def d3mockup():
 def d3circles():
 	return render_template('d3mockup/d3circles.jade')
 
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.jade')
+
 if __name__ == '__main__':
     app.run()
