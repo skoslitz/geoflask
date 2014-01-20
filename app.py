@@ -1,7 +1,8 @@
 #!/usr/bin/env python2.7
 # -*- coding: utf8 -*-
 
-from flask import Flask, render_template, url_for
+import os
+from flask import Flask, render_template, url_for, json
 from flaskext.coffee import coffee
 
 app = Flask(__name__)
@@ -18,7 +19,10 @@ def index():
 
 @app.route('/python')
 def python():
-	return render_template('python.jade')
+	SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+	json_url = os.path.join(SITE_ROOT, "static/data", "taiwan.json")
+	data = json.load(open(json_url))
+	return render_template('python.jade', data=data)
 
 @app.route('/charts')
 def charts():
