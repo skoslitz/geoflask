@@ -2,6 +2,7 @@
 # -*- coding: utf8 -*-
 
 from flask import Flask, render_template, url_for
+from flaskext.coffee import coffee
 
 app = Flask(__name__)
 app.config.update(
@@ -9,13 +10,15 @@ app.config.update(
   SECRET_KEY='You_will_never_know_:)'
 )
 app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
-
-from flaskext.coffee import coffee
 coffee(app) 
 
 @app.route('/')
 def index():
     return render_template('index.jade')
+
+@app.route('/python')
+def python():
+	return render_template('python.jade')
 
 @app.route('/charts')
 def charts():
