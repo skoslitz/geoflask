@@ -1,7 +1,7 @@
 #!/usr/bin/env python2.7
 # -*- coding: utf8 -*-
 
-import os
+import os, markdown
 from flask import Flask, render_template, url_for, json
 from flaskext.coffee import coffee
 
@@ -60,6 +60,11 @@ def d3mockup():
 @app.route('/d3mockup/circles')
 def d3circles():
     return render_template('d3mockup/d3circles.jade')
+
+
+@app.route('/projektmanagement/projektstruktur')
+def projektstruktur():
+    return render_template('projektmanagement/projektstruktur.jade')
 
 
 @app.errorhandler(404)

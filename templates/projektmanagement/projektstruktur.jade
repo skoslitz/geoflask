@@ -1,0 +1,32 @@
+extends base
+block append content 
+	.text-left
+		.col-md-11.col-md-offset-1
+			h2 Projektstruktur
+			h3 'workspace' folder
+			p in which each sub-folder correspond to a separate project
+			h3 'data' folder
+			p where I put all the data used by more than a project
+			h3 'archive' folder
+			p with all finished project
+			h3 'project' folder
+			:markdown
+				- planning/ -> a folder containing all the files related to the early phase of the project. Usually this is the first folder I create, and here I store all the miscellaneous files (the notes/objectives/initial drafts) that I collect in the first weeks of a projects, when I still am not sure which programs to write.
+				- bugs/ -> I plan to use [ditz](http://ditz.rubyforge.org/) to keep track of bugs and To-Dos, currently working with [trello](http://trello.com)
+				- data/ -> folders containing the different data I need to use, soft-linked from ~/data
+				- parameters/ -> ideally, I should have configuration files so if I want to run my analysis on other dataset, I only have to change the parameters here
+				- src/ -> with all code
+				- a Makefile to re-run all the analysis I wish
+				- scripts/ with all the scripts
+				- lib/ eventually, if I am reusing code from other projects
+				- pipelines/ with all .mk (makefile) files
+
+				- results/
+						1. tables/ -> tabular-like results
+						1. plots/ -> plots
+						1. manuscript/ -> draft for the manuscript, final figures and data, etc..
+						1. figures/
+						1. tables/
+						1. references/
+
+				I use git for revision control, to get a log of all the changes I make to scripts and results.
