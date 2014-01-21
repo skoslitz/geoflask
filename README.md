@@ -1,5 +1,6 @@
 # flask app gerüst
 dependencies:
+- markdown
 - pyjade
 - flask-coffee
 - flask
