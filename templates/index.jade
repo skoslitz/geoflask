@@ -1,28 +1,48 @@
 extends base
+block append logo
+	.text-center
+		h1 Journal
+		a(href=url_for('python'))
+			span.glyphicon.glyphicon-align-justify
+		hr
 block append content 
-	.text-left
-		a(href=url_for('python')) py
 	.row
-		.col-md-10.col-md-offset-2
-			h1 Ein Atlas für den Tee
-			p D3.js basierte Kartographie der Tee Anbaugebiete, Liste mit urls zu Themen des Tees
-			a(href=url_for('teeatlas')) \\Link
+		.col-md-8.col-md-offset-1
+			.thumbnail
+				img(src=url_for('static', filename="img/organic-world.jpg"))
+				.caption
+					h3 Ein Atlas für den Tee
+					p D3.js basierte Kartographie der Tee Anbaugebiete, Liste mit urls zu Themen des Tees
+					a.btn.btn-success(href=url_for('teeatlas')) Zum Teeatlas
 	.row
-		.col-md-10.col-md-offset-2
-			h1 Mapping stuff
-			p d3.js prototypes
+		.col-md-8.col-md-offset-1
+			.thumbnail
+				img(src=url_for('static', filename="img/projectmanagement.jpg"))
+				.caption
+					h3 Projektmanagement
+					p Struktur der Projektmanagement
+					a.btn.btn-success(href=url_for('projektstruktur')) Zum Artikel
 	.row
-		.col-md-10.col-md-offset-2
-			h1 Charting stuff
-			p d3.js prototypes
-			a(href=url_for('charts')) \\Link
+		.col-md-8.col-md-offset-1
+			.thumbnail
+
+				.caption
+					h3 Mapping stuff
+					p d3.js prototypes
+					a.btn.btn-success(href='#') Zum Artikel
 	.row
-		.col-md-10.col-md-offset-2
-			h1 d3.js Spielwiese
-			p diverse mockups	
-			a(href=url_for('d3mockup')) \\Link
+		.col-md-8.col-md-offset-1
+			.thumbnail
+
+				.caption
+					h3 Charting stuff
+					p d3.js prototypes
+					a.btn.btn-success(href=url_for('charts')) Zum Artikel
 	.row
-		.col-md-10.col-md-offset-2
-			h1 Projektmanagement
-			p Struktur der Projektmanagement
-			a(href=url_for('projektstruktur')) \\Link
+		.col-md-8.col-md-offset-1
+			.thumbnail
+
+				.caption
+					h3 d3.js Spielwiese
+					p diverse mockups	
+					a.btn.btn-success(href=url_for('d3mockup')) Zum Artikel
