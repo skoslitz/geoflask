@@ -4,14 +4,18 @@
 import os, markdown
 from flask import Flask, render_template, url_for, json
 from flaskext.coffee import coffee
+from flask_flatpages import FlatPages
 
 app = Flask(__name__)
 app.config.update(
     DEBUG=True,
+    FLATPAGES_EXTENSION = '.md',
     SECRET_KEY='You_will_never_know_:)'
 )
 app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
 coffee(app)
+
+pages = FlatPages(app)
 
 
 @app.route('/')
@@ -19,13 +23,20 @@ def index():
     return render_template('index.jade')
 
 
+@app.route('/blog')
+def blog():
+    return render_template('blog.jade', articles=pages)
+
+
+@app.route('/blog/<path:path>/')
+def article(path):
+    article = pages.get_or_404(path)
+    return render_template('article.jade', article=article)
+
+
 @app.route('/python')
 def python():
-    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
-    json_url = os.path.join(SITE_ROOT, "static/data", "taiwan.json")
-    data = json.load(open(json_url, 'r'))
-    return render_template('python.jade', data=data)
-
+    pass
 
 @app.route('/charts')
 def charts():

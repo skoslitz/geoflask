@@ -1,0 +1,11 @@
+extends base
+block append content 
+		.text-left
+			h2 Blogeinträge
+			p [Ausgabe zu Testzwecken]
+		.col-md-10.col-md-offset-2
+			ul
+				each article in articles
+					li
+						h4 
+							#{article.title}, veröffentlicht #{article.published}
