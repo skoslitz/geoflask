@@ -1,9 +1,15 @@
-extends base
-block append content 
-		.text-left
-			h2 Blogeinträge
-			p [Ausgabe zu Testzwecken]
-		.col-md-10.col-md-offset-2
-			#{article}
-			hr
-			h6 #{article.published}
+extends ./base
+block append logo
+	.row
+		.col-sm-1
+			a(href=url_for('index'))
+				svg(xmlns="http://www.w3.org/2000/svg", width="90", height="90", class="tealeaf")
+					path(d="M30.923 7.952c17.592 13.723 16.728 26.5 5.733 49.673-2.6-3.144-16.193-15.334-10.434-32.496 4.748-14.147 4.701-17.177 4.701-17.177zM39.983 60.619s27.776-16.885 51.777 3.274c0 0-23.861 12.148-36.348 3.979-12.484-8.172-15.429-7.253-15.429-7.253zM45.435 49.984c-2.528 3.677-16.5 18.565-37.263 37.975l1.121 4.01s24.2-28.532 37.117-40.066l-.007-.026c1.787-.164 5.492-.504 13.193-1.212 18.1-1.662 20.21-17.711 26.045-29.101-30.953-.856-32.874 6.839-40.206 28.42z")    
+		.col-sm-11
+			h1.logo #{article.title}
+	hr
+block append content
+	.col-md-10.col-md-offset-2
+		#{article}
+		.text-right
+			small verfasst am: #{article.published}
