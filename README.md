@@ -1,10 +1,12 @@
 # flask app gerüst
 dependencies:
-- Flask-FlatPages
-- Markdown
-- pyjade
-- Flask-Coffee
 - Flask
+- Flask-FlatPages
+- Flask-Coffee
+- Markdown 
+- pyjade
+
+
 
 ---
 
