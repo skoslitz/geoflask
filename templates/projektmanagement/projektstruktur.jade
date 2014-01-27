@@ -1,8 +1,16 @@
 extends ./base
+block append logo
+	.row
+			.col-sm-1
+				a(href=url_for('index'))
+					svg(xmlns="http://www.w3.org/2000/svg", width="90", height="90", class="magazin")
+						path(d="M17.88,18.964v66.304H72.12V18.964H17.88z M24.987,26.244h29.951v6.997H24.987V26.244z M25.683,41.669v-2.98H45v2.98H25.683  z M45,48.542v2.98H25.683v-2.98H45z M25.683,66.335h32.68v2.98h-32.68V66.335z M65.581,77.638H25.683v-2.98h39.898V77.638z   M65.581,60.992H25.683v-2.98h39.898V60.992z M65.581,53.098H49.375V38.306h16.206V53.098z M66.081,33.241h-7.719v-6.997h7.719  V33.241z")    
+			.col-sm-11
+				h1.magazin Ordnerstrukturen für Arbeitsprojekte
+		hr
 block append content 
 	.text-left
 		.col-md-11.col-md-offset-1
-			h2 Projektstruktur
 			h3 'workspace' folder
 			p in which each sub-folder correspond to a separate project
 			h3 'data' folder

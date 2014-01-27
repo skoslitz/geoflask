@@ -1,18 +1,28 @@
-h1, h2, h3,h4, p, small {
+h1, h2, h3, h4, p, small {
 font-family: 'Bitter', serif;
-}
-h2{
-	color: #66bb50;
 }
 a {
 	color: #0056d2;
 }
 .tealeaf {
- 	fill: #66bb50;
+ 	fill: #333;
+	color: #66bb50;
 }
 .tealeaf:hover {
-	fill: #333;
+	fill: #66bb50;
 }
-h1.logo {
+h1.magazin {
 	margin-top: 60px;
+	color: #CC0201;
+}
+h1.tealeaf {
+	margin-top: 70px;
+	color: #66bb50
+}
+.magazin {
+ 	fill: #333;
+ 	color: #CC0201
+}
+.magazin:hover {
+	fill: #66bb50;
 }
