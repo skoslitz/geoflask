@@ -9,7 +9,7 @@ from flask_flatpages import FlatPages
 app = Flask(__name__)
 app.config.update(
     DEBUG=True,
-    FLATPAGES_EXTENSION = '.md',
+    FLATPAGES_EXTENSION='.md',
     SECRET_KEY='You_will_never_know_:)'
 )
 app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
@@ -37,6 +37,7 @@ def article(path):
 @app.route('/python')
 def python():
     pass
+
 
 @app.route('/charts')
 def charts():

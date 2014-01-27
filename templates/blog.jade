@@ -12,6 +12,6 @@ block append content
 	.col-md-10.col-md-offset-2
 		ul
 			each article in articles
-				a(href='#')
+				a(href=url_for("article", path=article.path))
 					h2 #{article.title}
 				p Veröffentlicht: #{article.published}, Autor: #{article.author}
