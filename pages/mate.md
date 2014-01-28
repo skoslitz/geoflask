@@ -9,3 +9,5 @@ Es erfolgt ein Anbau in den südlichen Bundesstaaten Rio Grande do Sul, ...
 ###Links
 ushuaia.pl - Polnischer Dienstleister mit einem Artikel über Yerba Mate:
 [What, Where, How and When](http://www.ushuaia.pl/yerba/where)
+
+Eintrag von mate im [New Crop Resource Online Program](http://www.hort.purdue.edu/newcrop/1492/mate.html)
