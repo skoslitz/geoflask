@@ -1,10 +1,10 @@
+/*map fundamentals*/
 body {
   background-color: whitesmoke;
 }
 .waterways {
   fill: none;
   stroke: steelblue;
-  
 }
 .stream {
   stroke: darkblue;
@@ -34,19 +34,28 @@ body {
   fill: chocolate;
   opacity: 0.8;
 }
-.Neu-Hirschburg {
-  fill: crimson;
-  opacity: 1;
+.rivers {
+  fill: none;
+  stroke: steelblue;
 }
-
-#mecklenburgPlaces {
-  margin-top: 20;
+.arc path {
+  stroke: #fff;
+}
+.hidden {
+display: none;
 }
 .graticule {
   fill: none;
   stroke: #333;
   opacity: 0.4;
 }
+#s_americaState,
+#indiaState,
+#taiwanState,
+#indiaCity {
+  color: crimson;
+}
+/*india map*/
 .india  {
   fill: darkgrey;
   opacity: 0.6;
@@ -56,24 +65,24 @@ body {
   fill: none;
   stroke: blue;
 }
-#indiaState,
-#taiwanState,
-#indiaCity {
-  color: crimson;
-}
+/*taiwan map*/
 .taiwan {
   fill: darkgrey;
   opacity: 0.6;
   stroke: darkred;
 }
-.rivers {
-  fill: none;
-  stroke: steelblue;
-  
+/*s_america map*/
+.s_america,
+.world {
+  fill: darkgrey;
+  opacity: 0.6;
+  stroke: darkred;
 }
-.arc path {
-  stroke: #fff;
-}
-.hidden {
-display: none;
+.Corrientes,
+.Misiones,
+.RioGrandedoSul,
+.Paran,
+.SantaCatarina,
+.MatoGrossodoSul {
+  fill: lightgreen;
 }

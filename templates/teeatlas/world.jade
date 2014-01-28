@@ -1,0 +1,67 @@
+extends ./ground
+block append head
+    script(src=url_for('static', filename="js/d3/d3.js"))
+    script(src=url_for('static', filename="js/d3/topojson.v1.min.js"))
+
+block append logo
+        .row
+            .col-sm-1
+                a(href=url_for('teeatlas'))
+                    svg(xmlns="http://www.w3.org/2000/svg", width="90", height="90", class="tealeaf")
+                        path(d="M30.923 7.952c17.592 13.723 16.728 26.5 5.733 49.673-2.6-3.144-16.193-15.334-10.434-32.496 4.748-14.147 4.701-17.177 4.701-17.177zM39.983 60.619s27.776-16.885 51.777 3.274c0 0-23.861 12.148-36.348 3.979-12.484-8.172-15.429-7.253-15.429-7.253zM45.435 49.984c-2.528 3.677-16.5 18.565-37.263 37.975l1.121 4.01s24.2-28.532 37.117-40.066l-.007-.026c1.787-.164 5.492-.504 13.193-1.212 18.1-1.662 20.21-17.711 26.045-29.101-30.953-.856-32.874 6.839-40.206 28.42z")    
+            .col-sm-11
+                h1.tealeaf World
+        hr
+
+block append content
+    .text-center
+        h3#world Region
+        #map
+
+    
+
+    //- world d3 map
+    script
+        var width = 600;
+        var height = 600;
+
+        var lon = 55.0;
+        var lat = -28;
+
+        var projection = d3.geo.albers()
+            .center([0, lat])
+            .rotate([lon, 0])
+            .parallels([-12, -35])
+            .scale(1500)
+            .translate([width / 2, height / 2]);
+
+        var path = d3.geo.path()
+            .projection(projection);
+
+        var svg = d3.select("#map").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        d3.json("{{ url_for( 'static', filename='data/temp/world.json') }}", function(error, world) {
+
+        svg.selectAll(".world")
+            .data(topojson.feature(world, world.objects.world).features)
+            .enter().append("path")
+            .attr("class", function(d) { return "world " + d.id; })
+            .attr("d", path)
+            .on("mouseover", function(d) {
+                d3.select("#world").text(d.id).style("opacity", "1");
+            })
+            .on("mouseout", function(d) {
+                d3.select("#world").text("Region").style("opacity", "0.4")
+            });
+
+        var graticule = d3.geo.graticule()
+            .step([5, 5]);  
+
+        svg.append("path")
+            .datum(graticule)
+            .attr("d", path)
+            .attr("class", "graticule line");
+        });
+        

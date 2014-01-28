@@ -64,6 +64,16 @@ def indien():
     return render_template('teeatlas/indien.jade')
 
 
+@app.route('/teeatlas/s_america')
+def s_america():
+    return render_template('teeatlas/s_america.jade')
+
+
+@app.route('/teeatlas/world')
+def world():
+    return render_template('teeatlas/world.jade')
+
+
 @app.route('/d3mockup')
 def d3mockup():
     return render_template('d3mockup/d3mockup.jade')
