@@ -1,7 +1,8 @@
 #!/usr/bin/env python2.7
 # -*- coding: utf8 -*-
 
-import os, markdown
+import markdown
+import os
 from flask import Flask, render_template, url_for, json
 from flaskext.coffee import coffee
 from flask_flatpages import FlatPages

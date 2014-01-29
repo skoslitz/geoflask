@@ -4,9 +4,16 @@ author: sk
 
 #Markdown Syntax
 
-####Zeilenumbruch:
++ ###Zeilenumbruch:
 Zeilenumbruch mit zwei spaces am Ende  
 der Zeile
-####Zitat:
+
++ ###Zitat:
 >"Dies ist ein Blockzitat"
 
++ ###Bold:
+**Bold mit \** ** oder __bold__ mit \__ am Anfang und Ende.
+
++ ###Horizontale Linie:
+Mit \___ (siehe unten)
+___
