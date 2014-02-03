@@ -37,7 +37,7 @@ def article(path):
 
 @app.route('/python')
 def python():
-    pass
+    return render_template('python.jade')
 
 
 @app.route('/charts')
