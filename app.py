@@ -13,86 +13,85 @@ app.config.update(
     FLATPAGES_EXTENSION='.md',
     SECRET_KEY='You_will_never_know_:)'
 )
-app.jinja_env.add_extension('pyjade.ext.jinja.PyJadeExtension')
-coffee(app)
 
+coffee(app)
 pages = FlatPages(app)
 
 
 @app.route('/')
 def index():
-    return render_template('index.jade')
+    return render_template('index.html')
 
 
 @app.route('/blog')
 def blog():
-    return render_template('blog.jade', articles=pages)
+    return render_template('blog.html', articles=pages)
 
 
 @app.route('/blog/<path:path>/')
 def article(path):
     article = pages.get_or_404(path)
-    return render_template('article.jade', article=article)
+    return render_template('article.html', article=article)
 
 
 @app.route('/python')
 def python():
-    return render_template('python.jade')
+    return render_template('python.html')
 
 
 @app.route('/charts')
 def charts():
-    return render_template('charts/charts.jade')
+    return render_template('charts/charts.html')
 
 
 @app.route('/charts/HIS-HF')
 def hisHf():
-    return render_template('charts/hisHf.jade')
+    return render_template('charts/hisHf.html')
 
 
 @app.route('/teeatlas')
 def teeatlas():
-    return render_template('teeatlas/teeatlas.jade')
+    return render_template('teeatlas/teeatlas.html')
 
 
 @app.route('/teeatlas/taiwan')
 def taiwan():
-    return render_template('teeatlas/taiwan.jade')
+    return render_template('teeatlas/taiwan.html')
 
 
 @app.route('/teeatlas/indien')
 def indien():
-    return render_template('teeatlas/indien.jade')
+    return render_template('teeatlas/indien.html')
 
 
 @app.route('/teeatlas/s_america')
 def s_america():
-    return render_template('teeatlas/s_america.jade')
+    return render_template('teeatlas/s_america.html')
 
 
 @app.route('/teeatlas/world')
 def world():
-    return render_template('teeatlas/world.jade')
+    return render_template('teeatlas/world.html')
 
 
 @app.route('/d3mockup')
 def d3mockup():
-    return render_template('d3mockup/d3mockup.jade')
+    return render_template('d3mockup/d3mockup.html')
 
 
 @app.route('/d3mockup/circles')
 def d3circles():
-    return render_template('d3mockup/d3circles.jade')
+    return render_template('d3mockup/d3circles.html')
 
 
 @app.route('/projektmanagement/projektstruktur')
 def projektstruktur():
-    return render_template('projektmanagement/projektstruktur.jade')
+    return render_template('projektmanagement/projektstruktur.html')
 
 
 @app.errorhandler(404)
 def page_not_found(error):
-    return render_template('404.jade')
+    return render_template('404.html')
 
 
 if __name__ == '__main__':

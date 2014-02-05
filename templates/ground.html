@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+{% block head %}
+  <head>
+    <title>actageo-blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="author" content="Sebastian Koslitz"/>
+    <meta name="geo.region" content="DE-SN"/>
+    <meta name="geo.placename" content="Leipzig"/>
+    <meta name="geo.position" content="51.3062;12.3739"/>
+    <meta name="ICBM" content="51.3062, 12.3739"/>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/d3.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/app.css') }}"/>
+    <link href="http://fonts.googleapis.com/css?family=Bitter:400,700" rel="stylesheet" type="text/css"/>
+    <script src="{{ url_for('static', filename='js/test.js') }}"></script>
+  </head>
+{% endblock %}
+  <body class="container">
+{% block logo %}{% endblock %}
+{% block content %}{% endblock %}
+  </body>
+</html>

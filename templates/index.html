@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block logo %}
+{{super()}}
+<div class="text-center">
+  <h1>Journal</h1>
+  <a href="{{ url_for('python') }}">
+    <span class="glyphicon glyphicon-align-justify"></span>
+  </a>
+  <hr/>
+</div>
+{% endblock %}
+{% block content %}
+{{super()}}
+<div class="row">
+  <div class="col-md-8 col-md-offset-1">
+    <div class="thumbnail">
+      <img src="{{ url_for('static', filename='img/organic-world.jpg') }}"/>
+      <div class="caption">
+        <h3>Ein Atlas für den Tee</h3>
+        <p>D3.js basierte Kartographie der Tee Anbaugebiete, Liste mit urls zu Themen des Tees</p>
+        <a href="{{ url_for('teeatlas') }}" class="btn btn-success">Zum Teeatlas</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-1">
+    <div class="thumbnail">
+      <div class="caption">
+        <h3>Blog</h3>
+        <p>Texte und Anleitungen von actageo Themen</p><a href="{{ url_for('blog') }}" class="btn btn-success">Zum Blog</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-1">
+    <div class="thumbnail">
+      <img src="{{ url_for('static', filename='img/projectmanagement.jpg') }}"/>
+      <div class="caption">
+        <h3>Projektmanagement</h3>
+        <p>Struktur der Projektmanagement</p>
+        <a href="{{ url_for('projektstruktur') }}" class="btn btn-success">Zum Artikel</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-1">
+    <div class="thumbnail">
+      <div class="caption">
+        <h3>Mapping stuff</h3>
+        <p>d3.js prototypes</p><a href="#" class="btn btn-success">Zum Artikel</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-1">
+    <div class="thumbnail">
+      <div class="caption">
+        <h3>Charting stuff</h3>
+        <p>d3.js prototypes</p><a href="{{ url_for('charts') }}" class="btn btn-success">Zum Artikel</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8 col-md-offset-1">
+    <div class="thumbnail">
+      <div class="caption">
+        <h3>d3.js Spielwiese</h3>
+        <p>diverse mockups	</p><a href="{{ url_for('d3mockup') }}" class="btn btn-success">Zum Artikel</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
