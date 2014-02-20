@@ -36,4 +36,6 @@ Breitenangaben (lat) des Kartenausschnitts (parallels):
 		.parallels([-12, -35])
 
 #Binify
+
+Hexagon binning dot density maps
 [Intro binify](http://kevin.schaul.io/2013/04/19/introducing-binify/)
