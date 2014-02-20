@@ -1,4 +1,4 @@
-title: Vom shp zur topojson
+title: shp -> topojson | Binify
 published: 2014-01-27
 author: sk
 
@@ -30,9 +30,10 @@ Längen- und Breitenangaben:
 		var projection = d3.geo.albers()
             .center([0, lat])
             .rotate([lon, 0])
-
+ 
 Breitenangaben (lat) des Kartenausschnitts (parallels):
 
 		.parallels([-12, -35])
 
----
+#Binify
+[Intro binify](http://kevin.schaul.io/2013/04/19/introducing-binify/)
