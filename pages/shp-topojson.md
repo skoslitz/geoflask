@@ -15,6 +15,8 @@ erfolgt der Ausschnitt der gewünschten Länder. Export der Auswahl als shp.
 
 Mit dem CLI von ogr2ogr und topojson erfolgt die Umwandlung in geojson->topojson.
 
+[topojson - docs](https://github.com/mbostock/topojson/wiki/Command-Line-Reference#properties)
+
 **Wichtig**: geojson und topojson file sollten die gleichen Namen haben, da die Methode d3.json später auf das Objekt aus der geojson zugreift.
 
 		ogr2ogr -f GEOJSON file.json file.shp
