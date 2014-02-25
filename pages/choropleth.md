@@ -11,7 +11,7 @@ Die [Daten](http://www.maff.go.jp/e/tokei/kikaku/nenji_e/87nenji/index.html#nse0
 ###Statistik mit Pandas
 Die Python Library [Pandas](http://pandas.pydata.org/pandas-docs/stable/cookbook.html)
 
-
+		jp = pd.DataFrame.from_csv('/Users/kOssi/Desktop/actageo_panda/japanTea.csv')
 		DataFrame.describe() 
 		                 ga           prod
 		count     47.000000      47.000000
