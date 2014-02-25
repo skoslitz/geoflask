@@ -10,6 +10,8 @@ Die [Daten](http://www.maff.go.jp/e/tokei/kikaku/nenji_e/87nenji/index.html#nse0
 
 ##Statistik mit Pandas
 Die Python Library [Pandas]()
+
+
 		DataFrame.describe() 
 		                 ga           prod
 		count     47.000000      47.000000
